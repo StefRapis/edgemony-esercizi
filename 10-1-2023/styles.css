@@ -1,0 +1,28 @@
+bodyElem {
+}
+
+.hero__div {
+  display: relative;
+  height: 400px;
+  width: 100vh;
+}
+
+.hero__img {
+  width: 100vh;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__title {
+  display: absolute;
+
+  font-size: 3rem;
+  color: black;
+  z-index: 6;
+}
+
+.hero__subtitle {
+  display: absolute;
+  color: black;
+  font-size: 2rem;
+}
