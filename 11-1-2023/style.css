@@ -1,0 +1,12 @@
+.card {
+  border: 1px grey solid;
+  height: 450px;
+  width: 200px;
+  background-color: antiquewhite;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.img__card {
+  width: 100%;
+}
