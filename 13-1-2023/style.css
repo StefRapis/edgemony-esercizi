@@ -1,0 +1,46 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slider__images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 450px;
+}
+
+.sliding__images {
+  border-radius: 10%;
+}
+
+.slider__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.first__btn,
+.second__btn,
+.third__btn {
+  border: solid 1px grey;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+.first__btn:hover,
+.second__btn:hover,
+.third__btn:hover {
+  background-color: darkslategrey;
+}
