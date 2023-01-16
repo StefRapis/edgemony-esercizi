@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  gap: 20px;
+  align-content: center;
+  flex-wrap: wrap;
+  color: #f0eccf;
+}
+
+.download__btn {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 9px 20px;
+  background-color: bisque;
+  color: brown;
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.infoContainer {
+  margin-top: 200px;
+  width: 300px;
+  height: 350px;
+  padding: 20px;
+  background-color: #3c6255;
+}
+
+.cardName {
+  color: #f0eccf;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cardDescription {
+  padding-top: 20px;
+  color: #f0eccf;
+}
+
+.loader {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 80px;
+  color: brown;
+}
+
+.cardPrice {
+  padding: 20px 2px;
+  font-weight: bold;
+  color: #f0eccf;
+}
+
+.cardImage {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
