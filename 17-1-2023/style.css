@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #f0eccf;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.download__btn {
+  margin: 50px auto;
+  padding: 20px 40px;
+  line-height: 0%;
+  background-color: #3c6255;
+  color: bisque;
+  border: none;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.loader {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 30px auto 50px auto;
+  color: #3c6255;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+}
+
+.infoContainer {
+  box-shadow: #3c6255 0 2 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  height: 500px;
+
+  background-color: #3c6255;
+}
+
+.cardName {
+  padding-top: 20px;
+  color: #f0eccf;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cardDescription {
+  padding-top: 20px;
+  color: #f0eccf;
+  font-weight: lighter;
+}
+
+.cardPrice {
+  padding: 20px 2px;
+  font-weight: bold;
+  color: #f0eccf;
+  font-size: 1.2rem;
+}
+
+.cardImage {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.buyButton {
+  padding: 5px 10px;
+  background-color: bisque;
+  color: #3c6255;
+  border: none;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* .tendinaCart {
+  background-color: white;
+  box-shadow: 0px 1px 1px #3c6255;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 250px;
+  height: 300px;
+} */

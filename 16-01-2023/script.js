@@ -57,6 +57,7 @@ const manipulationFunc = (data) => {
     const description = document.createElement("p");
     const price = document.createElement("p");
     const image = document.createElement("img");
+    const buyButton = document.createElement("button");
 
     container.className = "infoContainer";
     name.className = "cardName";
@@ -66,10 +67,11 @@ const manipulationFunc = (data) => {
     price.className = "cardPrice";
     price.textContent = item.price + " euro";
     image.className = "cardImage";
-    image.setAttribute("src", "https://picsum.photos/100/100");
-    image.setAttribute;
+    image.setAttribute("src", item.images);
+    buyButton.className = "buyButton";
+    buyButton.textContent = "Aggiungi al carrello";
 
     bodyEl.appendChild(container);
-    container.append(image, name, description, price);
+    container.append(image, name, description, price, buyButton);
   });
 };

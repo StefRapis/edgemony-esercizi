@@ -5,6 +5,7 @@
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   display: flex;
   gap: 20px;
   align-content: center;
@@ -18,24 +19,35 @@ body {
   margin-right: auto;
   margin-top: 30px;
   margin-bottom: 50px;
-  padding: 9px 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+
+  padding-bottom: 20px;
   background-color: bisque;
-  color: brown;
+  color: #3c6255;
+  border: 2px #3c6255 dotted;
   height: 30px;
-  border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .infoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  border-radius: 8px;
   margin-top: 200px;
   width: 300px;
-  height: 350px;
+  height: 450px;
   padding: 20px;
   background-color: #3c6255;
 }
 
 .cardName {
+  padding-top: 20px;
   color: #f0eccf;
   font-size: 1.5rem;
   font-weight: bold;
@@ -44,6 +56,7 @@ body {
 .cardDescription {
   padding-top: 20px;
   color: #f0eccf;
+  font-weight: lighter;
 }
 
 .loader {
@@ -58,10 +71,26 @@ body {
   padding: 20px 2px;
   font-weight: bold;
   color: #f0eccf;
+  font-size: 1.2rem;
 }
 
 .cardImage {
-  height: 100px;
-  width: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  position: relative;
+  height: 120px;
+  width: 300px;
   object-fit: cover;
+}
+
+.buyButton {
+  padding-bottom: 20px;
+  background-color: bisque;
+  color: #3c6255;
+  border: 2px #3c6255 dotted;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
