@@ -151,11 +151,22 @@ header .hamburger .line {
   color: #c58940;
 }
 
-.form__products {
+.form__section {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form__part {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.h2__form {
+  color: #c58940;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
 }
 
 form {
@@ -176,4 +187,12 @@ form .btn__submit {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#form__products {
+  width: 100%;
+}
+
+#form__categories {
+  width: 100%;
 }

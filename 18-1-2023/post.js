@@ -8,7 +8,8 @@ const formInput = document.querySelector("#form__input");
 const buttonInput = document.querySelector("#button");
 
 // MEMORIZZO I VALORI INSERITI NEL FORM IN UN OGGETTO CHE POI STAMPO IN CONSOLE (CIASCUN SINGOLO VALORE INSERITO)
-// IN CONSOLE MI DA IL SEGUENTE ERRORE: "script.js:10 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')"
+// IN CONSOLE MI DAVA IL SEGUENTE ERRORE: "script.js:34 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')"
+// HO PROVATO A RIMUOVERE FILE SCRIPT DA CONTACT.HTML MA NON FUNZIONAVA CMQ
 
 formInput.addEventListener("submit", (e) => {
   e.preventDefault();
