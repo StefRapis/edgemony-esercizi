@@ -42,7 +42,7 @@ const manipulationFunc = (data) => {
     const price = document.createElement("p");
     const image = document.createElement("img");
     const buyButton = document.createElement("button");
-    const tendina = document.createElement("div");
+    // const tendina = document.createElement("div");
 
     container.className = "infoContainer";
 
@@ -61,7 +61,7 @@ const manipulationFunc = (data) => {
     buyButton.className = "buyButton";
     buyButton.textContent = "Aggiungi al carrello";
 
-    tendina.className = "tendinaCart";
+    // tendina.className = "tendinaCart";
 
     buyButton.addEventListener("click", () => {
       cart.push(item);
@@ -69,7 +69,7 @@ const manipulationFunc = (data) => {
       alert("Oggetto aggiunto nel carrello");
     });
 
-    bodyEl.append(productsEl, tendina);
+    bodyEl.append(productsEl);
     productsEl.appendChild(container);
     container.append(image, name, description, price, buyButton);
   });

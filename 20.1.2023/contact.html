@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js" type="module"></script>
+    <script src="./post.js" type="module"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="logo">
+        <a href="index.html">SHOPWHAT?</a>
+      </h1>
+      <a class="product__link">PRODOTTI</a>
+      <a class="order__link" href="./contact.html">INVIA UN ORDINE</a>
+      <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </header>
+
+    <section class="form__section">
+      <div class="form__part">
+        <h2 class="h2__form">Inserisci i prodotti qui</h2>
+        <form id="form__products">
+          <label for="text">Titolo</label>
+          <input class="titleInput" type="text" name="title" id="title" />
+          <label for="text">Prezzo</label>
+          <input class="priceInput" type="text" name="price" id="price" />
+          <label for="text">Descrizione</label>
+          <input
+            class="descriptionInput"
+            type="text"
+            name="description"
+            id="description"
+          />
+          <label for="text">Categoria</label>
+          <input
+            class="categoryInput"
+            type="text"
+            name="category"
+            type="number"
+            min="1"
+            id="category"
+          />
+          <label for="text">Immagine</label>
+          <input class="imageInput" type="url" name="image" id="image" />
+          <label for="title">Aggiungi o Modifica:</label>
+          <select id="addOrEditInput">
+            <option value="POST">Aggiungi</option>
+            <option value="PUT">Modifica</option>
+          </select>
+          <label for="title">ID Prodotto:</label>
+          <input
+            name="title"
+            placeholder="solo per modifiche"
+            type="text"
+            id="justEditsInput"
+          />
+          <input class="btn__submit" type="submit" value="Invia" />
+        </form>
+      </div>
+
+      <div class="form__part">
+        <h2 class="h2__form">Inserisci le categorie qui</h2>
+        <form id="form__categories">
+          <label for="name">Nome Categoria</label>
+          <input
+            type="text"
+            name="name"
+            type="number"
+            min="1"
+            id="categoryName"
+          />
+          <label for="image">Link Immagine</label>
+          <input type="url" name="image" id="categoryImage" />
+          <input class="btn__submit" type="submit" value="Invia" />
+        </form>
+      </div>
+
+      <div class="form__part">
+        <h2 class="h2__form">Inserisci le categorie qui</h2>
+        <form id="delete__product">
+          <label for="name">ID Prodotto / Categoria</label>
+          <input type="text" name="name" id="productId" />
+          <input class="btn__submit" type="submit" value="Invia" />
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
