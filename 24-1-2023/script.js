@@ -27,7 +27,10 @@ searchEl.addEventListener("input", (e) => {
   searchValue = e.target.value;
 
   GET("users?limit=12").then((data) =>
-    data.users.map((user) => bodyEl.appendChild(userCreator(user)))
+    data.users.map((user) => {
+      if (user.firstName.includes(searchValue))
+        bodyEl.appendChild(userCreator(user));
+    })
   );
 });
 
