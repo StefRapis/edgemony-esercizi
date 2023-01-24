@@ -1,0 +1,33 @@
+body {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  background-color: #bfeaf5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  background-color: #eafdfc;
+  border: 2px solid #eafdfc;
+  box-shadow: 0px 0px 4px black;
+  border-radius: 4%;
+}
+
+.user_name {
+  margin-bottom: -10px;
+}
+
+input {
+  position: absolute;
+  top: 30px;
+  border: none;
+}
