@@ -1,0 +1,44 @@
+body {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  background-color: #bfeaf5;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+  background-color: #eafdfc;
+  border: 2px solid #eafdfc;
+
+  border-radius: 4%;
+}
+
+.container_grande {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container_grafico {
+  background-color: #eafdfc;
+}
+
+.tower_container {
+  height: 300px;
+  width: 50px;
+  background-color: aqua;
+}
+
+.container_grafico {
+  width: 600px;
+  height: 500px;
+}
