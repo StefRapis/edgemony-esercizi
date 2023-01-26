@@ -1,0 +1,30 @@
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.divCounter {
+  height: 100px;
+  width: 100px;
+  border: 2px solid red;
+}
+
+.timer {
+  font-size: 4rem;
+}
+
+.stop {
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: cadetblue;
+  cursor: pointer;
+}

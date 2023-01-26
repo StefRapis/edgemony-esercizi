@@ -1,0 +1,45 @@
+{
+  "countries": [
+    { "paese": "Spagna", "lingua": "spagnolo", "continente": "Europa" },
+    {
+      "paese": "Italia",
+      "lingua": "italiano",
+      "continente": "Europa"
+    },
+
+    {
+      "paese": "Regno Unito",
+      "lingua": "inglese",
+      "continente": "Europa"
+    },
+
+    {
+      "paese": "Stati Uniti d'America",
+      "lingua": "inglese",
+      "continente": "America"
+    },
+
+    {
+      "paese": "Germania",
+      "lingua": "tedesco",
+      "continente": "Europa"
+    },
+
+    {
+      "paese": "Bolivia",
+      "lingua": "spagnolo",
+      "continente": "America"
+    },
+
+    {
+      "paese": "Cina",
+      "lingua": "cinese",
+      "continente": "Asia"
+    },
+    {
+      "paese": "Sud Africa",
+      "lingua": "inglese",
+      "continente": "Africa"
+    }
+  ]
+}
