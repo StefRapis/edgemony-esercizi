@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: black;
+}
+
+.tv_shows {
+  position: relative;
+  padding: 40px;
+}
+
+.card_element {
+  box-shadow: 5 1 4 white;
+  cursor: pointer;
+  filter: grayscale(0.7);
+  transition: all 0.35s;
+}
+
+.card_element:hover {
+  filter: grayscale(0);
+  filter: saturate(1.5);
+  transform: scale(1.2);
+}
+
+.most_popular,
+.top_rated {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  height: 400px;
+  width: 100%;
+  background-color: black;
+  overflow-x: auto;
+}
+
+.most_popular,
+.top_rated::-webkit-scrollbar-thumb {
+}
+
+main .h1_popular {
+  position: absolute;
+  top: 20px;
+  font-size: 2rem;
+  color: tomato;
+  padding-top: 40px;
+}
+
+main .h1_rated {
+  position: absolute;
+  top: 420px;
+  font-size: 2rem;
+  color: tomato;
+  padding-top: 40px;
+}
+
+.tv_image {
+  width: 150px;
+  border-radius: 7px;
+}
