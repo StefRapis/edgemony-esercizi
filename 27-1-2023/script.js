@@ -34,6 +34,7 @@ const cardEl = qSA(".card_element");
 // );
 
 // MI CHIAMO ALLO STESSO MOMENTO I DUE GET
-Promise.all([GET("popular"), GET("top_rated")]).then((data) =>
-  console.log(data)
-);
+Promise.all([GET("popular"), GET("top_rated")]).then((data) => {
+  data[0].results.map((show) => mostPopular.append(tvCardGenerator(show)));
+  data[1].results.map((show) => topRated.append(tvCardGenerator(show)));
+});
