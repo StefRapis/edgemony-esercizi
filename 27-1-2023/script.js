@@ -15,13 +15,21 @@
 // effettui una chiamata GET al film specifico
 // renderizzi il risultato proprio sotto la input, mostrando almeno immagine e titolo del film ricercato
 
-import { cE, qS, qSA, GET, tvCardGenerator } from "./utils.js";
+import {
+  cE,
+  qS,
+  qSA,
+  GET,
+  GET3,
+  tvCardGenerator,
+  modalCreator,
+} from "./utils.js";
 
 const containerTv = qS(".tv_shows");
 const mostPopular = qS(".most_popular");
 const topRated = qS(".top_rated");
-
-const cardEl = qSA(".card_element");
+const modal = qS(".modal");
+const overlay = qS(".overlay");
 
 //CHIAMATE GET CHE CANCELLO PERCHE LE RISOLVO TUTTE INSIEME CON IL PROMISEALL
 
@@ -34,7 +42,28 @@ const cardEl = qSA(".card_element");
 // );
 
 // MI CHIAMO ALLO STESSO MOMENTO I DUE GET
-Promise.all([GET("popular"), GET("top_rated")]).then((data) => {
-  data[0].results.map((show) => mostPopular.append(tvCardGenerator(show)));
-  data[1].results.map((show) => topRated.append(tvCardGenerator(show)));
+Promise.all([GET("popular"), GET("top_rated")])
+  .then((data) => {
+    data[0].results.map((show) => mostPopular.append(tvCardGenerator(show)));
+    data[1].results.map((show) => topRated.append(tvCardGenerator(show)));
+  })
+  .then(() => {
+    // QUI MI PESCO TUTTE LE CARD CREATE DINAMICAMENTE, DENTRO IL THEN ASINCRONO
+    const cardsEl = qSA(".card_element");
+
+    //  SU TUTTE LE CARD APPLICO UN EVENTO CHE MI FA UNA CHIAMATA CHE MI EVOCA L'ID DEL FILM CLICCATO
+    cardsEl.forEach((tvCardEl) =>
+      tvCardEl.addEventListener("click", () =>
+        GET3("tv", tvCardEl.id).then((selectedShow) => {
+          modal.appendChild(modalCreator(selectedShow));
+          modal.style.display = "flex";
+        })
+      )
+    );
+  });
+
+overlay.addEventListener("click", () => {
+  const showModal = qS(".modal_container");
+  showModal.remove();
+  modal.style.display = "none";
 });

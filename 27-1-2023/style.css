@@ -108,8 +108,44 @@ main .h1_rated {
   border-radius: 10px;
 }
 
-.overlay {
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: none;
+
+  /* display: none; */
 }
 
-.modal {
+.modal .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
+.modal_container {
+  border-radius: 15px;
+  display: flex;
+  width: 700px;
+  background-color: white;
+  box-shadow: 0 0 8px black;
+}
+
+.modal_container img {
+  width: 400px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.modal_wrapper {
+  padding: 30px;
 }
