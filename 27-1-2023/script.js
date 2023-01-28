@@ -15,36 +15,25 @@
 // effettui una chiamata GET al film specifico
 // renderizzi il risultato proprio sotto la input, mostrando almeno immagine e titolo del film ricercato
 
-import { cE, qS, GET } from "./utils.js";
+import { cE, qS, qSA, GET, tvCardGenerator } from "./utils.js";
 
 const containerTv = qS(".tv_shows");
 const mostPopular = qS(".most_popular");
 const topRated = qS(".top_rated");
 
-const tvCardGenerator = (data) => {
-  const tvCardEl = cE("div");
-  const tvImage = cE("img");
+const cardEl = qSA(".card_element");
 
-  tvCardEl.className = "card_element";
-  tvImage.className = "tv_image";
+//CHIAMATE GET CHE CANCELLO PERCHE LE RISOLVO TUTTE INSIEME CON IL PROMISEALL
 
-  if (data.poster_path) {
-    tvImage.setAttribute(
-      "src",
-      `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-    );
-  }
+// GET("popular").then((data) =>
+//   data.results.map((show) => mostPopular.append(tvCardGenerator(show)))
+// );
 
-  tvImage.setAttribute("alt", data.title);
+// GET("top_rated").then((data) =>
+//   data.results.map((show) => topRated.append(tvCardGenerator(show)))
+// );
 
-  tvCardEl.appendChild(tvImage);
-  return tvCardEl;
-};
-
-GET("popular").then((data) =>
-  data.results.map((show) => mostPopular.append(tvCardGenerator(show)))
-);
-
-GET("top_rated").then((data) =>
-  data.results.map((show) => topRated.append(tvCardGenerator(show)))
+// MI CHIAMO ALLO STESSO MOMENTO I DUE GET
+Promise.all([GET("popular"), GET("top_rated")]).then((data) =>
+  console.log(data)
 );
