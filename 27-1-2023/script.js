@@ -21,6 +21,7 @@ import {
   qSA,
   GET,
   GET3,
+  GETsearch,
   tvCardGenerator,
   modalCreator,
 } from "./utils.js";
@@ -30,6 +31,7 @@ const mostPopular = qS(".most_popular");
 const topRated = qS(".top_rated");
 const modal = qS(".modal");
 const overlay = qS(".overlay");
+const searchInput = qS(".search_input");
 
 //CHIAMATE GET CHE CANCELLO PERCHE LE RISOLVO TUTTE INSIEME CON IL PROMISEALL
 
@@ -66,4 +68,18 @@ overlay.addEventListener("click", () => {
   const showModal = qS(".modal_container");
   showModal.remove();
   modal.style.display = "none";
+});
+
+let inputWord = "";
+
+searchInput.addEventListener("input", (event) => {
+  inputWord = event.data;
+  console.log(inputWord);
+
+  ///// MI SONO INCARTATA QUI! MI DA ERRORE 422 e CANNOT READ PROPERTIES OF UNDEFINED A RIGA 82 (riferito a name)
+
+  GETsearch("search", "tv").then((data) => {
+    if (data.results.name.includes(inputWord))
+      bodyEl.appendChild(modalCreator(show));
+  });
 });

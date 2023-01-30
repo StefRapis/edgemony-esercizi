@@ -12,7 +12,7 @@ const API_KEY = "api_key=f443bcf0af8c5783ab55f098ca24c218";
 // https://api.themoviedb.org/3/tv/{tv_id}?api_key=<<api_key>>&language=en-US
 // type = movie o tv
 
-export { cE, qS, qSA, GET, GET3, tvCardGenerator, modalCreator };
+export { cE, qS, qSA, GET, GET3, GETsearch, tvCardGenerator, modalCreator };
 
 const GET = async (type = "popular") => {
   const res = await fetch(BASE_URL + type + "?" + API_KEY);
@@ -22,6 +22,12 @@ const GET = async (type = "popular") => {
 
 const GET3 = async (type, id) => {
   const res = await fetch(BASE_URL2 + type + "/" + id + "?" + API_KEY);
+  const data = await res.json();
+  return data;
+};
+
+const GETsearch = async (type, movieortv) => {
+  const res = await fetch(BASE_URL2 + type + "/" + movieortv + "?" + API_KEY);
   const data = await res.json();
   return data;
 };
@@ -58,6 +64,7 @@ const modalCreator = (data) => {
 
   modalContainer.className = "modal_container";
   wrapperTextEl.className = "modal_wrapper";
+  modalTitle.className = "modal_title";
 
   modalImage.className = "modal_image";
   modalImage.setAttribute(
@@ -65,9 +72,9 @@ const modalCreator = (data) => {
     `https://image.tmdb.org/t/p/w500/${data.poster_path}`
   );
   modalTitle.textContent = data.name;
-  modalEpisodes.textContent = data.number_of_episodes;
-  modalSeasons.textContent = data.number_of_seasons;
-  modalOverview.textContent = data.modalOverview;
+  modalEpisodes.textContent = "Number of episodes: " + data.number_of_episodes;
+  modalSeasons.textContent = "Number of seasons: " + data.number_of_seasons;
+  modalOverview.textContent = data.overview;
 
   wrapperTextEl.append(modalTitle, modalEpisodes, modalSeasons, modalOverview);
   modalContainer.append(modalImage, wrapperTextEl);
