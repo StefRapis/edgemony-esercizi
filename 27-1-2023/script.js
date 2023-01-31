@@ -71,6 +71,7 @@ overlay.addEventListener("click", () => {
 });
 
 let inputWord = "";
+const data = await res.json();
 
 searchInput.addEventListener("input", (event) => {
   inputWord = event.data;
@@ -83,3 +84,13 @@ searchInput.addEventListener("input", (event) => {
       bodyEl.appendChild(modalCreator(show));
   });
 });
+
+const arrayElementiFiltrati = arrayFilm.filter(
+  (item) => item.name === inputSearch.value
+);
+console.log(arrayElementiFiltrati);
+
+
+GETsearch("search", "tv").then ((data) => 
+const filteredShows = data.filter((show) => data.results.name === inputWord)
+)
