@@ -19,7 +19,7 @@ const clienti = fs.readFileSync("clienti.html");
 let server = http.createServer((req, res) => {
   if (req.url === "/") res.end(homepage);
   else if (req.url === "/prodotti") res.end(prodotti);
-  else if (req.url === "./clienti") res.end(clienti);
+  else if (req.url === "/clienti") res.end(clienti);
   else {
     res.writeHead(404);
     res.end("Pagina non trovata");

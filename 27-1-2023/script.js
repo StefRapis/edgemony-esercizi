@@ -85,12 +85,14 @@ searchInput.addEventListener("input", (event) => {
   });
 });
 
+
+
+
+GETsearch("search", "tv").then ((data) => 
+const filteredShows = data.filter((show) => data.results.name === inputWord))
+
+
 const arrayElementiFiltrati = arrayFilm.filter(
   (item) => item.name === inputSearch.value
 );
 console.log(arrayElementiFiltrati);
-
-
-GETsearch("search", "tv").then ((data) => 
-const filteredShows = data.filter((show) => data.results.name === inputWord)
-)
