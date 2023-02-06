@@ -32,12 +32,9 @@ app.get("/books", (req, res) => {
 });
 
 // NON FUNZIONANTE
-// imposto pagina con middleware autorizzazione
+// imposto pagina con middleware autorizzazione e applico slice per mostrare solo una parte di lista
 app.get("/books", authorization, (req, res) => {
-  const someBooks = books.map((book) => {
-    const { id, title, author } = books;
-    return { id, title, author };
-  });
+  const someBooks = books.slice(0, 3);
   res.json(someBooks);
 });
 
