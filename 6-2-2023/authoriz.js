@@ -1,4 +1,4 @@
-// creo middleware per impostare autorizzazione e filtro libri
+// creo middleware per impostare autorizzazione
 
 const authorization = (req, res, next) => {
   const { user } = req.query;

@@ -16,9 +16,9 @@ const PORT = 8081;
 const path = require("path");
 
 // importo file json "books"
-const books = require("./books");
+const { books } = require("./books");
 
-// importo middlewares
+// importo middleware
 const authorization = require("./authoriz");
 
 // imposto Home Page
