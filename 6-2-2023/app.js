@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 });
 
 // imposto pagina pubblica con tutti i libri provenienti da file json
-app.get("/books", (req, res) => {
+app.get("/api/books", (req, res) => {
   res.json(books);
 });
 
