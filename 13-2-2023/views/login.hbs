@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <link rel="stylesheet" href="css/style2.css" />
+  </head>
+  <body>
+    <div class="login">
+      <h2>Effettua l'accesso all'<b>Area Riservata</b></h2>
+
+      <form action="/login" method="POST">
+        <input type="text" name="name" placeholder="nome" />
+        <input type="password" name="password" placeholder="password" />
+        <button type="submit">Entra</button>
+      </form>
+
+    </div>
+
+    {{#if message}}
+      <h3>{{message}}</h3>
+    {{/if}}
+
+  </body>
+</html>
