@@ -1,0 +1,66 @@
+***** CREO DATABASE E COLLEZIONE SU MongoDb ******
+
+use prova_database
+'switched to db prova_database'
+db.createCollection("libri")
+{ ok: 1 }
+db.libri.insertMany([{
+    id: 1,
+    title: "La via en Rose",
+    author: "Leanne Graham",
+    genre: "drama",
+    price: "12.99",
+  },
+  {
+    id: 2,
+    title: "The blue lighthouse",
+    author: "Marshall Lee",
+    genre: "drama",
+    price: "8.99",
+  },
+  {
+    id: 3,
+    title: "The house behind the bridge",
+    author: "Stephen Warsham",
+    genre: "drama",
+    price: "14.99",
+  },
+  {
+    id: 4,
+    title: "Alice in Wonderland",
+    author: "Mary Ann",
+    genre: "fantasy",
+    price: "32.99",
+  },
+  {
+    id: 5,
+    title: "Majestic Me",
+    author: "Harry McDonald",
+    genre: "children",
+    price: "6.99",
+  }])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63eba68f46dfdd8af06b5ef9"),
+    '1': ObjectId("63eba68f46dfdd8af06b5efa"),
+    '2': ObjectId("63eba68f46dfdd8af06b5efb"),
+    '3': ObjectId("63eba68f46dfdd8af06b5efc"),
+    '4': ObjectId("63eba68f46dfdd8af06b5efd")
+  }
+}
+
+****** INSERISCO UN SOLO OGGETTO *******
+
+db.libri.insertOne ({
+  id: 6,
+  title: "I ragazzi della via Pal",
+  author: "Maya Brucoli",
+  genre: "children",
+  price: "3.99"
+})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63ebaabd46dfdd8af06b5f01")
+}
+
