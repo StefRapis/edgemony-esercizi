@@ -1,5 +1,8 @@
 .App {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
   font-size: 2rem;
 
-  /* border: 2px solid red; */
+  /* border: 2px solid orange; */
 }
