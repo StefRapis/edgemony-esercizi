@@ -1,0 +1,34 @@
+.Gallery {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 2px solid red; */
+}
+
+.Gallery img {
+  width: 350px;
+}
+
+.section_gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.section_gallery p {
+  width: 40%;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 1rem;
+  padding: 20px;
+}
+
+.section_gallery hr {
+  border: solid 1px rgb(163, 161, 161);
+  width: 20%;
+}
