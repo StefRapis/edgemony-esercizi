@@ -1,7 +1,9 @@
 import "./index.css";
+// import Pictures from "./mocks/pictures.js";
 
 const Gallery = () => {
   return (
+    // <Pictures />
     <div className="Gallery">
       <img
         src="https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1384&q=80"

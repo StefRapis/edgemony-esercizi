@@ -1,9 +1,0 @@
-.ProductsRepetition {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  font-size: 2rem;
-
-  /* border: 2px solid orange; */
-}

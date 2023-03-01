@@ -14,6 +14,7 @@ Aggiungere alla lista dei prodotti e alla gallery un titolo che identifichi la s
 
 import "./App.css";
 import Header from "./components/header";
+import Hero from "./components/hero";
 import Footer from "./components/footer";
 import ProductsRepetition from "./components/productsRepetition";
 import ButtonControl from "./components/buttonControl";
@@ -88,6 +89,7 @@ const App = () => {
     // con MAP mi ciclo ogni componente con appesa la sua prop
     <div className="App">
       <Header />
+      <Hero />
       <Gallery />
       <ButtonControl listDataLength={prodottiLista.length} />
       <ProductsRepetition listData={prodottiLista} />

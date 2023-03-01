@@ -4,10 +4,11 @@
   background-color: #fafafa;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .Header img {
-  width: 170px;
+  width: 150px;
 }
 
 .social {
@@ -17,7 +18,7 @@
 
 ul {
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 
 ul li {
@@ -27,5 +28,6 @@ ul li {
 ul li a {
   text-decoration: none;
   color: gray;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
 }

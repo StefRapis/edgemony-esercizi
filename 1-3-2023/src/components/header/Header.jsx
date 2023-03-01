@@ -13,13 +13,13 @@ const Header = () => {
         <nav>
           <ul>
             <li>
-              <a href="https://www.facebook.com/">Facebook</a>
+              <a href="https://www.facebook.com/">FACEBOOK</a>
             </li>
             <li>
-              <a href="https://twitter.com/?lang=it">Twitter</a>
+              <a href="https://twitter.com/?lang=it">TWITTER</a>
             </li>
             <li>
-              <a href="https://www.instagram.com/">Instagram</a>
+              <a href="https://www.instagram.com/">INSTAGRAM</a>
             </li>
           </ul>
         </nav>
