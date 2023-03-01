@@ -1,4 +1,4 @@
-.Gallery {
+.Products {
   width: 400px;
   display: flex;
   justify-content: center;
@@ -9,11 +9,11 @@
   /* border: 2px solid red; */
 }
 
-.Gallery img {
+.Products img {
   width: 100%;
 }
 
-.section_gallery {
+.section_products {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -23,7 +23,7 @@
   padding-top: 20px;
 }
 
-.section_gallery h3 {
+.section_products h3 {
   width: 70%;
   text-align: center;
 
@@ -31,7 +31,7 @@
   /* padding: 20px; */
 }
 
-.section_gallery p {
+.section_products p {
   width: 40%;
   text-align: center;
   line-height: 1.6;
@@ -39,7 +39,7 @@
   /* padding: 20px; */
 }
 
-.section_gallery hr {
+.section_products hr {
   border: solid 1px rgb(163, 161, 161);
   width: 20%;
 }
