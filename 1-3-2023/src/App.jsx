@@ -1,3 +1,4 @@
+// 1-3-2023
 /*Esercizio 1
 Riprodurre quanto fatto a lezione (in termini di funzionalità) - copia e incolla non basta, bisogna chiedersi come 
 funziona man mano che lo si implementa...
@@ -10,7 +11,20 @@ Avanzato
 Sfogo alla creatività con un nuovo componente.
 Aggiungere alla lista dei prodotti e alla gallery un titolo che identifichi la sezione.*/
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 2-3-2023
+
+/* Esercizio 1
+Riprodurre la funzionalità night-mode sul vostro progettino.
+
+Esercizio 2
+Aggiungere o modificare il componente <Gallery />di modo che venga rappresentato come un carosello (presenza dei buttons cambio stato).
+
+Avanzato
+Replicare il funzionamento del dettaglio prodotto visto a lezione. Utilizzare una modale che si apre al click sul singolo prodotto. 
+Il contenuto della stessa può essere una img o info generali sul prodotto.*/
+
 import { useState } from "react";
 
 import "./App.css";
