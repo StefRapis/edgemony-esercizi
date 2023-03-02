@@ -1,6 +1,6 @@
 import "./index.css";
 
-const Hero = () => {
+const Hero = ({ title }) => {
   return (
     <div className="Hero">
       <img
@@ -8,8 +8,9 @@ const Hero = () => {
         alt=""
       />
       <h1>
-        {" "}
-        <span className="tech">Tech:</span> <br /> tutta un'altra storia.
+        TECH: <br />
+        {title}
+        {/* <span className="tech">Tech:</span> <br /> tutta un'altra storia. */}
       </h1>
     </div>
   );

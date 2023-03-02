@@ -1,9 +1,22 @@
 .ProductsRepetition {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+
   font-size: 2rem;
 
   /* border: 2px solid orange; */
+}
+
+.justProducts {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.productsTitle {
+  margin-left: 100px;
+  font-size: 3rem;
 }

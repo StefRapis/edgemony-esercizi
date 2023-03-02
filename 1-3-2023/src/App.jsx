@@ -11,17 +11,22 @@ Sfogo alla creatività con un nuovo componente.
 Aggiungere alla lista dei prodotti e alla gallery un titolo che identifichi la sezione.*/
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+import { useState } from "react";
 
 import "./App.css";
 import Header from "./components/header";
 import Hero from "./components/hero";
+import Philosophy from "./components/philosophy";
 import Footer from "./components/footer";
 import ProductsRepetition from "./components/productsRepetition";
 import ButtonControl from "./components/buttonControl";
 import Gallery from "./components/gallery";
+import Slider from "./components/slider";
 import { prodottiLista } from "../src/mocks/listaProdotti";
 
 const App = () => {
+  const [isDarkMode, setDarkMode] = useState(false);
+
   // CREO FUNZIONE DA PASSARE COME PROP AI COMPONENTI "BUTTON"
 
   // questo oggetto puo essere condiviso con i figli di MAIN attraverso prop
@@ -89,10 +94,12 @@ const App = () => {
     // con MAP mi ciclo ogni componente con appesa la sua prop
     <div className="App">
       <Header />
-      <Hero />
+      <Hero title="Tutta un'altra storia" />
+      <Philosophy commitment="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard known printer took a galley of type." />
       <Gallery />
       <ButtonControl listDataLength={prodottiLista.length} />
       <ProductsRepetition listData={prodottiLista} />
+      <Slider />
       {/* <Gallery galleryInfo={product} />
       <Gallery galleryInfo={product2} />
       <Gallery galleryInfo={product3} /> */}

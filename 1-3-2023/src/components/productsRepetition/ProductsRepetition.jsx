@@ -8,10 +8,14 @@ import Products from "../products";
 const ProductsRepetition = ({ listData }) => {
   return (
     <div className="ProductsRepetition">
-      {listData.map((product) => (
-        <Products productsInfo={product} />
-      ))}
-      ;
+      <h3 className="productsTitle">Prodotti</h3>
+      <div className="justProducts">
+        {" "}
+        {listData.map((product) => (
+          <Products productsInfo={product} />
+        ))}
+        ;
+      </div>
     </div>
   );
 };

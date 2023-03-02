@@ -1,7 +1,8 @@
 .Hero {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 120px;
+  overflow: hidden;
   /* box-shadow: 0px 12px 31px -5px rgba(0, 0, 0, 0.77); */
 }
 
@@ -13,10 +14,10 @@
 
 .Hero h1 {
   position: absolute;
-  top: 40%;
+  top: 50.5%;
   left: 7%;
   color: white;
-  font-size: 4rem;
+  font-size: 9rem;
 }
 
 .Hero .tech {
