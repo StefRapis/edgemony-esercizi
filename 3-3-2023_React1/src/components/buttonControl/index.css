@@ -1,0 +1,7 @@
+.ButtonControl {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  /* border: 2px solid red; */
+}
