@@ -1,0 +1,28 @@
+.Input {
+  /* border: 2px solid blueviolet; */
+  padding: 5px 15px;
+}
+
+.type_input {
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px 15px;
+  /* border: 2px solid #dc8449; */
+  width: 200px;
+  outline: none;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.button {
+  font-family: "Courier New", Courier, monospace;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  border: none;
+  line-height: 1.3;
+  cursor: pointer;
+  background-color: #dc8449;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
