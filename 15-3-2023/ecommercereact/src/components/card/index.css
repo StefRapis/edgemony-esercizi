@@ -1,0 +1,36 @@
+.Card {
+  border: 1px solid #1b3849;
+  /* height: 300px; */
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Card:hover {
+  transform: scale(1.1);
+  transition: all 0.35s;
+}
+
+.Card img {
+  width: 220px;
+}
+
+.card_desc {
+  padding: 10px;
+}
+
+.card_prices {
+  padding: 10px;
+}
+
+.card_cat {
+  background-color: #ff6f4a;
+  width: 50%;
+  padding-left: 10px;
+  color: white;
+}
+
+.card_price {
+  font-weight: bold;
+}

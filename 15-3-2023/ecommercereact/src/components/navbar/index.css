@@ -1,0 +1,35 @@
+.Navbar {
+  /* border: 2px solid purple; */
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.Navbar ul li {
+  list-style-type: none;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: #1b3849;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  text-align: center;
+  width: 60%;
+  border: none;
+  height: 25px;
+  outline: none;
+  color: #1b3849;
+}

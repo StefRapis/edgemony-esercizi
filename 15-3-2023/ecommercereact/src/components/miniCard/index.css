@@ -1,0 +1,17 @@
+.MiniCard {
+  /* border: 2px solid pink; */
+  cursor: pointer;
+  object-fit: cover;
+  transition: all 0.35s;
+}
+
+.MiniCard:hover {
+  transform: scale(1.1);
+}
+
+.MiniCard img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}

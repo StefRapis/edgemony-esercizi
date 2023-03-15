@@ -1,0 +1,12 @@
+.Footer {
+  /* border: 2px solid lightskyblue; */
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #1b3849;
+  background-color: #1b3849;
+  color: #f3efec;
+  padding: 40px;
+}
