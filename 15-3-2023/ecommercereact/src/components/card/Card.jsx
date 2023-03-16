@@ -13,7 +13,12 @@ import "./index.css";
 //   thumbnail: "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
 // };
 
-const Card = ({ product }) => {
+const Card = ({ product, setCartList }) => {
+  const addToCart = () => {
+    setCartList((prev) => [...prev, product]);
+    console.log(product);
+  };
+
   return (
     <div className="Card">
       <img src={product.thumbnail} alt={product.title} />
@@ -21,6 +26,7 @@ const Card = ({ product }) => {
       <div className="card_prices">
         <p className="card_cat">{product.category}</p>
         <p className="card_price"> Euro {product.price}</p>
+        <button onClick={addToCart}>Aggiungi al carrello</button>
       </div>
     </div>
   );

@@ -1,0 +1,33 @@
+.CartItem {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.item_img {
+  width: 110px;
+  padding-left: 30px;
+}
+
+.cart_info {
+  /* border: 2px solid red; */
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  justify-content: center;
+  padding-left: 20px;
+}
+
+.item_title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.item_category {
+  margin: 0;
+}
+
+.item_price {
+  font-weight: bold;
+  margin: 0;
+}

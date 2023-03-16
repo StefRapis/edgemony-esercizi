@@ -6,6 +6,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 130px;
 }
 
 .hero_img {
@@ -26,6 +27,6 @@
 .hero_subtitle {
   position: absolute;
   color: aliceblue;
-  bottom: 120px;
+  bottom: 110px;
   text-shadow: 2px 2px #000000;
 }
