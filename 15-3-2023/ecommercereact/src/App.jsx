@@ -32,7 +32,10 @@ function App() {
   const [cartModalOn, setCartModalOn] = useState(false);
 
   // uSeState per salvarmi dentro l'array di oggetti da aggiungere al click del pulsante dentro Card
-  const [cartList, setCartList] = useState([]);
+  // interrogo local storage. se l'elemento c'e, a cartList applico la lista del local storage, altrimenti un array vuoto da popolare
+  const [cartList, setCartList] = useState(
+    JSON.parse(localStorage.getItem("cartList")) || []
+  );
 
   // stato per filtro ricerca per categorie per MiniCard
   const [searchCategory, setSearchCategory] = useState("");
@@ -46,7 +49,16 @@ function App() {
       />
       <Hero />
       <MiniCardList searchCategory={searchCategory} />
-      <CardList setCartList={setCartList} />
+      <CardList
+        setCartList={setCartList}
+        section="SkinCare"
+        endpoint="/products/category/skincare"
+      />
+      <CardList
+        setCartList={setCartList}
+        section="Home Decor"
+        endpoint="/products/category/furniture"
+      />
       <Footer />
       {cartModalOn && (
         <ModalCart cartList={cartList} setCartModalOn={setCartModalOn} />

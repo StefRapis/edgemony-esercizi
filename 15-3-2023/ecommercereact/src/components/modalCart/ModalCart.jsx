@@ -13,9 +13,13 @@ const ModalCart = ({ cartList, setCartModalOn }) => {
         <button onClick={closeModal}>X</button>
       </div>
       <hr />
-      {cartList.map((item) => (
-        <CartItem product={item} key={item.id} />
-      ))}
+      {!cartList.length ? (
+        <p className="empty_cart">
+          Il carrello é ancora vuoto. Inserisci un prodotto!
+        </p>
+      ) : (
+        cartList.map((item) => <CartItem product={item} key={item.id} />)
+      )}
     </div>
   );
 };

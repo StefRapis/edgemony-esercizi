@@ -5,18 +5,16 @@ import { useState, useEffect } from "react";
 
 import Card from "../card";
 
-const CardList = ({ setCartList }) => {
+const CardList = ({ setCartList, section, endpoint }) => {
   const [productsList, setProductsList] = useState([]);
 
   useEffect(() => {
-    GET("/products/category/skincare").then((data) =>
-      setProductsList(() => data.products)
-    );
+    GET(endpoint).then((data) => setProductsList(() => data.products));
   }, []);
 
   return (
     <div className="CardList">
-      <h2>Skin Care</h2>
+      <h2>{section}</h2>
       <div className="card_list">
         {productsList.map((product) => (
           <Card product={product} setCartList={setCartList} key={product.id} />

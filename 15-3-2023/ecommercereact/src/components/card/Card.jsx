@@ -17,6 +17,16 @@ const Card = ({ product, setCartList }) => {
   const addToCart = () => {
     setCartList((prev) => [...prev, product]);
     console.log(product);
+
+    // SETTO LOCAL STORAGE
+    // creo var. che contiene tutti gli oggetti aggiunti al local storage e che posso andare a pescare, se non ci sono, mi restituisce un array vuoto
+    const itemsInLocalStorage =
+      JSON.parse(localStorage.getItem("cartList")) || [];
+    // quindi creo un local storage con gli oggetti contenuti nel local storage + il nuovo oggetto aggiunto nel carrello
+    localStorage.setItem(
+      "cartList",
+      JSON.stringify([...itemsInLocalStorage, product])
+    );
   };
 
   return (
