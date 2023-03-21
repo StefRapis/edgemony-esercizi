@@ -1,6 +1,6 @@
 import "./index.scss";
 
-const Hero = () => {
+const Hero = ({ setCocktailCategory }) => {
   return (
     <div className="Hero">
       <img
@@ -10,10 +10,15 @@ const Hero = () => {
       />
       <div className="hero_categories">
         <ul>
-          <li>ALL</li>
-          <li>SHOTS</li>
-          <li>PUNCH</li>
-          <li>OTHER</li>
+          <li onClick={() => setCocktailCategory("")}>ALL</li>
+          <li onClick={() => setCocktailCategory("Cocktail")}>COCKTAILS</li>
+          <li onClick={() => setCocktailCategory("Punch / Party Drink")}>
+            PUNCH
+          </li>
+          <li onClick={() => setCocktailCategory("Ordinary Drink")}>
+            ORDINARY
+          </li>
+          <li onClick={() => setCocktailCategory("Shot")}>SHOT</li>
         </ul>
       </div>
     </div>

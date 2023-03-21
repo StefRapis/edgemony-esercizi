@@ -1,4 +1,7 @@
 import "./index.scss";
+import { useState, useEffect } from "react";
+import { GET } from "../../utils/fetch";
+import { filteredCocktails } from "../../utils/func";
 
 import Card from "../card";
 
@@ -16,11 +19,22 @@ import Card from "../card";
 //   strIngredient3: "Mint",
 // };
 
-const Content = ({ data }) => {
+// devo fare filtro su array della fetch
+const Content = ({ data, setDrinkModal }) => {
+  const [cocktailList, setCocktailList] = useState([]);
+
+  useEffect(() => {
+    GET("d").then(({ drinks }) => setCocktailList(() => drinks));
+  }, []);
+
   return (
     <div className="Content">
-      {data.map((cocktail) => (
-        <Card data={cocktail} key={cocktail.idDrink} />
+      {filteredCocktails(cocktailList, "strCategory", data).map((cocktail) => (
+        <Card
+          data={cocktail}
+          key={cocktail.idDrink}
+          setDrinkModal={setDrinkModal}
+        />
       ))}
     </div>
   );
