@@ -1,14 +1,14 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Hero = ({ setCocktailCategory }) => {
   return (
-    <div className="Hero">
+    <div className={styles.Hero}>
       <img
-        className="hero_img"
-        src="https://img.freepik.com/free-photo/blend-cocktails-glasses-with-orange-fruit_23-2149384409.jpg?w=900&t=st=1679325299~exp=1679325899~hmac=9270a0fd88a1b4a12188edd5ab6d12512d64341af21d3d0315f010b2113ed0db"
+        className={styles.img}
+        src="https://images.unsplash.com/photo-1592858321831-dabeabc2dd65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
         alt="cocktails"
       />
-      <div className="hero_categories">
+      <div className={styles.categories}>
         <ul>
           <li onClick={() => setCocktailCategory("")}>ALL</li>
           <li onClick={() => setCocktailCategory("Cocktail")}>COCKTAILS</li>

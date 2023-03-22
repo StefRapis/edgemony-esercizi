@@ -1,4 +1,4 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const Card = ({ data, setDrinkModal }) => {
   const openDrinkModal = () => {
@@ -6,16 +6,16 @@ const Card = ({ data, setDrinkModal }) => {
   };
 
   return (
-    <div className="Card" onClick={openDrinkModal}>
+    <div className={styles.Card} onClick={openDrinkModal}>
       <img src={data.strDrinkThumb} alt="" />
 
-      <div className="card_titles">
-        <h3 className="card_title">{data.strDrink}</h3>
-        <p className="card_alcohol">{data.strAlcoholic}</p>
+      <div className={styles.titles}>
+        <h3 className={styles.title}>{data.strDrink}</h3>
+        <p className={styles.category}>{data.strCategory}</p>
+        <p className={styles.alcohol}>{data.strAlcoholic}</p>
       </div>
-      <p>{data.strCategory}</p>
 
-      <div className="card_instructions">
+      <div className={styles.instructions}>
         {/* <p>{data.strInstructions}</p> */}
         {/* <span>{data.strIngredient1}</span>
         <span>{data.strIngredient2}</span>

@@ -1,4 +1,4 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 import { useState, useEffect } from "react";
 import { GET } from "../../utils/fetch";
 import { filteredCocktails } from "../../utils/func";
@@ -28,7 +28,7 @@ const Content = ({ data, setDrinkModal }) => {
   }, []);
 
   return (
-    <div className="Content">
+    <div className={styles.Content}>
       {filteredCocktails(cocktailList, "strCategory", data).map((cocktail) => (
         <Card
           data={cocktail}

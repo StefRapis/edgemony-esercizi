@@ -4,13 +4,15 @@
   background-color: $base-colour;
   position: fixed;
   top: 300px;
-  left: 30px;
-  right: 30px;
+  //   left: calc(50% - 400px);
+  //   right: calc(50% - 400px);
+  left: 40px;
+  right: 40px;
   //   width: 70%;
-  //   border: 2px solid orange;
+  border: 2px solid orange;
   display: flex;
 
-  .modal_image {
+  .image {
     // border: 2px solid red;
     width: 40%;
 
@@ -21,7 +23,7 @@
     }
   }
 
-  .modal_info {
+  .info {
     width: 60%;
     padding-left: 30px;
     // border: 2px solid blue;

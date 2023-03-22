@@ -1,4 +1,4 @@
-import "./index.scss";
+import styles from "./index.module.scss";
 
 const obj = {
   idDrink: "11006",
@@ -44,11 +44,11 @@ const DrinkModal = ({ setDrinkModal }) => {
   };
 
   return (
-    <div className="DrinkModal">
-      <div className="modal_image">
+    <div className={styles.DrinkModal}>
+      <div className={styles.image}>
         <img src={obj.strDrinkThumb} alt="cocktail" />
       </div>
-      <div className="modal_info">
+      <div className={styles.info}>
         <button onClick={closeModal}>X</button>
         <h2>{obj.strDrink}</h2>
         <h4>{obj.strCategory}</h4>
@@ -56,7 +56,7 @@ const DrinkModal = ({ setDrinkModal }) => {
           Pour in a <p>{obj.strGlass}</p>
         </span>
         <hr />
-        <div className="modal_ingredients">
+        <div className={styles.ingredients}>
           <p>{obj.strIngredient1}</p>
           <p>{obj.strIngredient2}</p>
           <p>{obj.strIngredient3}</p>
