@@ -1,0 +1,29 @@
+.Modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // border: 2px solid red;
+  background-color: white;
+  height: 200px;
+  width: 500px;
+  border-radius: 30px;
+  position: fixed;
+  top: 500px;
+  left: calc(50vw - 250px);
+
+  h2 {
+    color: #b827c2;
+  }
+
+  button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  input {
+    margin-bottom: 40px;
+    outline: none;
+  }
+}
